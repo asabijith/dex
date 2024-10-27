@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify YouTube App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-white min-h-screen">
+    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-green-500"></div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="sticky top-0 bg-gray-900 p-4 z-40">
+        <div class="relative">
+            <input type="text" id="search-input" placeholder="Search songs..." class="w-full pl-10 pr-4 py-2 bg-gray-800 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-green-500" />
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-20 pt-4">
+        <div id="songs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Songs will be inserted here -->
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800">
+        <div class="flex justify-around items-center h-16">
+            <button class="nav-btn active" data-tab="home">
+                <span class="text-xs mt-1">Home</span>
+            </button>
+            <button class="nav-btn" data-tab="trending">
+                <span class="text-xs mt-1">Trending</span>
+            </button>
+            <button class="nav-btn" data-tab="library">
+                <span class="text-xs mt-1">Library</span>
+            </button>
+            <button class="nav-btn" data-tab="events">
+                <span class="text-xs mt-1">Events</span>
+            </button>
+            <button class="nav-btn" data-tab="artists">
+                <span class="text-xs mt-1">Artists</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
